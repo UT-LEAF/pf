@@ -1,0 +1,253 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #71a63c;
+  color: aliceblue;
+  overflow-x: hidden;
+}
+/* 縦スクロールバーを消す */
+body::-webkit-scrollbar {
+  display: none;
+}
+.protest-strike-regular {
+  font-family: "Protest Strike", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hero {
+  background: url("/img/bg/bara.jpg") no-repeat center center;
+  background-size: cover;
+  height: 150vh; /* 画像の高さが自動的に元のアスペクト比になるように設定 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 0 20px;
+  position: relative; /* 上位要素を position: relative; で固定します */
+  filter: brightness(120%) contrast(110%) saturate(140%);
+}
+.bigmoji {
+  position: relative;
+  bottom: 120px;
+  font-family: "Protest Strike", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1000%;
+  text-align: center;
+  text-justify: inter-character;
+  text-overflow: clip;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.365);
+  line-height: 0.9em;
+  background-color: rgba(56, 57, 57, 0.199);
+}
+/* ヒーローセクション内のボタンスタイル */
+.hero button {
+  position: relative;
+  bottom: 80px;
+  background-color: rgba(245, 245, 245, 0.432);
+  color: whitesmoke;
+  font-size: 2em;
+  font-family: "DotGothic16", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.hero button:hover {
+  background: #3b39398c;
+  color: aliceblue;
+}
+
+#curtain {
+  position: fixed;
+  top: -100%; /* 最初は画面外に配置 */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4cffbd; /* カーテンの色 */
+  z-index: 9999;
+  transition: top 0.4s ease-in-out;
+}
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+header {
+  position: relative;
+  /* グラデをかけている */
+  background: linear-gradient(
+      to right,
+      rgba(102, 255, 148, 0.3),
+      rgba(3, 170, 42, 0)
+    ),
+    url("img/header-green2.jpg") no-repeat center center;
+  background-size: 100% auto;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  min-height: 50px; /* 画像の高さに合わせて調整 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row; /* コンテンツが横に並ぶように */
+  background-color: #71a63c; /* ブレンドするための背景色 */
+  background-blend-mode: multiply;
+  /* margin-top: 20px; */
+}
+/* 浮かせるやつ */
+
+.typography-section {
+  background-color: #72727223;
+}
+.image-wrapper {
+  background-color: #ffffff;
+  display: inline-block; /* 画像のサイズに合わせてラッパーのサイズを調整 */
+}
+.image-wrapper img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* 画像全体が見えるように調整 */
+  object-position: center; /* 画像を中央に配置 */
+  max-height: 250px; /* 最大高さを制限 */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.portrait {
+  width: 200px; /* 必要に応じて調整してください */
+  height: auto;
+  border-radius: 50%; /* サークル状にする場合 */
+  border: 3px solid white; /* 白い枠線が必要な場合 */
+  z-index: 2;
+}
+
+.site-title {
+  color: white;
+  font-size: 2em; /* 必要に応じて調整してください */
+  text-align: center;
+  z-index: 2;
+}
+
+.branding {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.header-portrait {
+  width: 100px; /* 必要に応じて調整してください */
+  height: auto;
+  border-radius: 10%; /* サークル状にする場合 */
+  margin-left: 10px; /* 必要に応じて調整してください */
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+.header-title {
+  color: white;
+  font-size: 1.5em; /* 必要に応じて調整してください */
+  margin-left: 10px; /* ポートレート写真との間隔 */
+  margin-bottom: 20px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  gap: 20px; /* ボタン同士の間隔を設定 */
+}
+/* スマートフォン等の小さな画面用のスタイル */
+@media screen and (max-width: 600px) {
+  header nav {
+    flex-direction: column;
+  }
+  header {
+    min-height: 30px; /* スマホ用の高さに調整 */
+  }
+}
+/* 中央の大きなタイポグラフィ*/
+.typography-section {
+  display: flex;
+  justify-content: center;
+  /* text-align: center; 画像を中央に配置 */
+  padding: 20px; /* 余白を追加 */
+}
+
+.typography-section img {
+  width: 100%; /* 画像をセクションの幅に合わせて伸縮 */
+  max-width: 1500px; /* 最大幅を設定 */
+  height: auto; /* 高さを自動調整 */
+}
+.btn {
+  background-color: rgba(245, 245, 245, 0.199); /* ボタンの背景を透明に */
+  color: white; /* ボタンのテキスト色 */
+  padding: 10px 20px;
+  border: 1px solid rgb(4, 62, 0);
+  cursor: pointer;
+  text-decoration: none; /* ボタンの下線を消す */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.401);
+}
+
+.btn a {
+  color: rgba(238, 238, 238, 0.877); /* リンクの文字色を白に */
+  text-decoration: none; /* 下線を消す */
+  display: block; /* リンクをブロック要素にして全幅を取らせる */
+}
+.btn-primary-text {
+  /* 上のテキストのスタイリング */
+  display: block;
+  font-size: 16px;
+}
+
+.btn-secondary-text {
+  /* 下のテキストのスタイリング */
+  display: block;
+  font-size: 8px;
+  text-align: center;
+  /*color:  英語のテキストの色 */
+}
+section {
+  padding: 20px;
+  margin: 20px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background: #333;
+  color: #fff;
+}

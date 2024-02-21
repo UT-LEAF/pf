@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>slick.js - Image Slider Sample</title>
+    <link rel="stylesheet" href="/slick/slick.css" />
+    <link rel="stylesheet" href="/slick/slick-theme.css" />
+    <style>
+      body {
+        text-align: center;
+      }
+      .slider {
+        margin: 0 auto 50px;
+      }
+      .slider img {
+        width: 100%;
+        display: inline-block; /* または block に設定 */
+        margin-right: 15px; /* 右の画像との間隔 */
+        margin-left: 15px; /* 左の画像との間隔 */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>slick.js - Image Slider Sample</h1>
+    <ul class="slider">
+      <li>
+        <img
+          src="https://fastly.picsum.photos/id/1/300/300.jpg?hmac=w1b4AOJM9vszS0a867iY2NXBzwc4LCeA0U6sEjdlSDk"
+          alt="imgae(1)"
+        />
+      </li>
+      <li>
+        <img
+          src="https://fastly.picsum.photos/id/2/300/300.jpg?hmac=18v9hYebAqcHuhqDo_PgGIHxZ5Ay-8Di7TqUUS5ZvXY"
+          alt="imgae(2)"
+        />
+      </li>
+      <li>
+        <img
+          src="https://fastly.picsum.photos/id/3/300/300.jpg?hmac=RT2JK6MzdIgNIWoIj61uPcz8aOSOi3lu2vhnwOxs7lY"
+          alt="imgae(3)"
+        />
+      </li>
+      <li>
+        <img
+          src="https://fastly.picsum.photos/id/4/300/300.jpg?hmac=nB_8GtgfsWYHpFADFwcfjkx-7wzVVAxmeuuoxGVBC-E"
+          alt="image(4)"
+        />
+      </li>
+    </ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/slick/slick.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".slider").slick({
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        });
+      });
+    </script>
+  </body>
+</html>
