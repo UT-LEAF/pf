@@ -33,6 +33,11 @@ body::-webkit-scrollbar {
 .bigmoji {
   position: relative;
   bottom: 120px;
+  top: 50%;
+  left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
   font-family: "Protest Strike", sans-serif;
   font-weight: 400;
   font-style: normal;
