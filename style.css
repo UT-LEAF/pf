@@ -18,7 +18,7 @@ body::-webkit-scrollbar {
 }
 
 .hero {
-  background: url("/img/bg/bara.jpg") no-repeat center center;
+  background: url("../img/bg/bara.jpg") no-repeat center center;
   background-size: cover;
   height: 150vh; /* 画像の高さが自動的に元のアスペクト比になるように設定 */
   display: flex;
