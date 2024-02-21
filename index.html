@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MY PORTFOLIO</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/slick/slick.css" />
+    <link rel="stylesheet" href="/slick/slick-theme.css" />
+  </head>
+  <!-- JQueryを使うためのコンテンツ・デリバリー・ネットワーク（CDN） -->
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"
+  ></script>
+  <body>
+    <div class="hero">
+      <p class="bigmoji">UT'S WEB<br />PORTFOLIO</p>
+      <!-- <button onclick="scrollToSection('#osyabtn')">See More</button> -->
+      <button onclick="scrollToSectionWithCurtain('#osyabtn')">See More</button>
+    </div>
+
+    <!-- スムーズにスクロールするスクリプト -->
+    <!-- カーテンのスクリプト -->
+    <script src="js/curtain2.js"></script>
+    <script>
+      function scrollToSection(sectionId) {
+        document.querySelector(sectionId).scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    </script>
+    <div id="osyabtn" class="hidden">
+      <!-- スクリプトのジャンプ先です -->
+      <header>
+        <div class="branding">
+          <img
+            src="img/nigaoe.png"
+            alt="ポートレート写真"
+            class="header-portrait"
+          />
+          <p class="header-title">MY PORTFOLIO</p>
+          <!-- あなたのサイトタイトルをここに -->
+        </div>
+        <nav>
+          <button class="btn" id="intBtn">
+            <a href="#about"
+              ><span class="btn-primary-text">自己紹介</span>
+              <span class="btn-secondary-text">ABOUT ME</span></a
+            >
+          </button>
+          <button class="btn" id="sklBtn">
+            <a href="#skills"
+              ><span class="btn-primary-text">スキル</span
+              ><span class="btn-secondary-text">SKILLS</span></a
+            >
+          </button>
+          <button class="btn" id="wkBtn">
+            <a href="#works"
+              ><span class="btn-primary-text">作品集</span
+              ><span class="btn-secondary-text">COLLECTION</span></a
+            >
+          </button>
+          <button class="btn" id="conBtn">
+            <a href="#contact"
+              ><span class="btn-primary-text">連絡先</span
+              ><span class="btn-secondary-text">CONTACT</span></a
+            >
+          </button>
+
+          <button class="btn" id="test">
+            <a href="#test"
+              ><span class="btn-primary-text">TEST</span
+              ><span class="btn-secondary-text">TEST</span></a
+            >
+          </button>
+        </nav>
+      </header>
+      <div class="typography-section">
+        <!-- <img
+        src="https://placehold.jp/1000x300.png"
+        alt="ダミーのタイポグラフィ画像"
+      /> -->
+        <div class="image-wrapper">
+          <img src="/img/ut-nametypo-gmpedited.png" alt="ut's typography art" />
+        </div>
+        <div class="image-wrapper">
+          <img src="/img/monsart.jpg" alt="ut's typography art" />
+        </div>
+        <div class="image-wrapper">
+          <img src="/img/own-banner2.png" alt="ut's typography art" />
+        </div>
+        <div class="image-wrapper">
+          <img src="/img/pouchbanner.png" alt="ut's typography art" />
+        </div>
+        <div class="image-wrapper">
+          <img src="/img/ut-nametypo-gmpedited.png" alt="ut's typography art" />
+        </div>
+      </div>
+      <script src="/slick/slick.min.js"></script>
+      <script>
+        $(document).ready(function () {
+          $(".typography-section").slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            dots: true,
+          });
+        });
+      </script>
+      <section id="about">
+        <h1>自己紹介</h1>
+        <p>ここに自己紹介のテキストを書きます。</p>
+      </section>
+
+      <section id="skills">
+        <h2>スキル</h2>
+        <p>ここにスキルの説明を書きます。</p>
+      </section>
+
+      <section id="works">
+        <h2>作品集</h2>
+        <p>ここに作品の説明や画像を配置します。</p>
+      </section>
+
+      <section id="contact">
+        <h2>連絡先</h2>
+        <p>連絡先の情報を書きます。</p>
+      </section>
+
+      <section id="test">
+        <h2>test</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
+          accusamus? Vero officiis quidem sed eos asperiores reprehenderit quis
+          beatae quaerat harum expedita? Odit esse saepe dicta, repudiandae
+          deleniti corporis accusantium.
+        </p>
+      </section>
+
+      <footer>
+        <p>&copy; 2024 UT</p>
+      </footer>
+    </div>
+  </body>
+</html>
